@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komoju HostField Minimum Example</title>
+    <style>
+      form {
+        padding: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://ja.doc.komoju.com/docs/fields-overview#%E3%82%B3%E3%83%BC%E3%83%89%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB -->
+    <script type="module" src="https://multipay.komoju.com/fields.js"></script>
+    <form>
+      <!-- optional payment method picker -->
+      <komoju-picker></komoju-picker>
+
+      <komoju-fields
+        session-id="%VITE_KOMOJU_SESSION_ID%"
+        publishable-key="%VITE_KOMOJU_PUBLISHABLE_KEY%"
+      ></komoju-fields>
+
+      <button type="submit">Pay</button>
+    </form>
+  </body>
+</html>
